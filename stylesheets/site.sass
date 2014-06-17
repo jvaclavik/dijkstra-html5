@@ -1,0 +1,282 @@
+@import compass
+
+@font-face
+  font-family: 'digital-7_monomono'
+  src: url('webfonts/digital-7_mono-webfont.eot')
+  src: url('webfonts/digital-7_mono-webfont.eot?#iefix') format('embedded-opentype'), url('webfonts/digital-7_mono-webfont.woff') format('woff'), url('webfonts/digital-7_mono-webfont.ttf') format('truetype'), url('webfonts/digital-7_mono-webfont.svg#digital-7_monomono') format('svg')
+  font-weight: normal
+  font-style: normal
+
+
+
+body
+  margin: 0
+  padding: 0
+  background: #000
+  color: #fff
+  font-family: "Arial", Sans-Serif
+  overflow: auto
+  
+img
+  border: 0
+
+a 
+  outline: none
+a img 
+  outline: none
+  
+  
+a:active, a:focus
+  outline: none
+  ie-dummy: expression(this.hideFocus=true)
+
+
+h2
+  margin: 0
+  color: #c84040
+  font: bold 24px "Arial", Sans-Serif
+
+
+
+
+
+#main
+  overflow: hidden
+  width: 1080px
+  height: 1920px
+
+
+#ad
+  text-align: center
+  img
+    height: 100%
+    
+
+.scroll, .shop-list, .news-scroll
+  overflow: auto
+  position: absolute
+  
+  
+.news-scroll
+  height: 600px
+  margin: 20px
+  max-width: 96%
+
+    
+#close  
+  display: none
+  position: fixed
+  bottom: 890px
+  right: 0px
+  background: url("../images/panel-close.png") no-repeat
+  width: 92px
+  height: 82px
+  
+  
+#timeout
+  display: none
+  position: fixed
+  bottom: 890px
+  left: 0px
+  
+  color: #b63636
+  font: bold 47px "digital-7_monomono"
+  background: url("../images/timeout-background.png") no-repeat
+  width: 90px
+  height: 81px
+  span
+    display: block
+    margin: 17px 10px
+
+#panel
+  background: #000 url("../images/panel-background.png") repeat-x bottom left
+  #big
+    margin: 0 1em 1em 1em
+    clear: both
+     
+    #tabs
+      display: none
+      padding-top: 15px
+      button
+        margin: 0 10px 0 0
+        padding: 0
+        float: left
+        display: block
+        &.shops
+          width: 420px
+        &.news
+          width: 300px
+        &.map
+          width: 300px
+          margin: 0px
+        div
+          height: 60px
+          display: block
+          border-radius: 8px 8px 0 0
+          //height: 110px
+          padding: 32px 30px
+          font: normal 30px Tahoma
+          text-transform: uppercase
+          position: relative
+        
+          img
+            margin-right: 20px
+            position: relative
+            top: 5px
+          &.active  
+            background: #fff
+            color: #000
+            
+            top: 1px
+
+          &.inactive  
+            border: solid 1px #333333
+            border-width: 1px 1px 0 1px
+            background: url("../images/tabs-inactive-background.png") repeat-x
+            color: #fff
+            top: 20px
+            
+            span, img
+              position: relative
+              top: -20px
+            
+    #white
+      background: #fefefe url("../images/white-background.png") repeat-y right top
+      clear: both
+      color: #000
+      border-radius: 0 0 8px 8px   
+      z-index: 10
+      position: relative           
+    .section
+
+      &.left
+        float: left
+        width: 350px
+        background: #dddddd url("../images/shop-detail-left-background.png") repeat-x top left
+        border-radius: 0 0 0 8px
+      &.right
+        float: right
+        min-width: 65%
+        border-right: solid 1px #fff
+    #shops
+      .shop-list
+        height: 750px
+        margin: 20px
+        max-width: 660px
+        .category 
+          float: left
+          width: 270px
+          margin-right: 20px
+          margin-top: 30px
+
+
+        ul, li
+          list-style-type: none
+          margin: 0
+          padding: 0
+        li:nth-child(even) .shop-link
+          background: #eee
+        li:nth-child(odd) .shop-link
+          background: #fff
+            
+        .shop-link
+          color: #333333
+          padding: 17px
+          display: block
+          text-decoration: underline
+
+          margin: 5px 0
+          &.active
+            filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#bc3737", endColorStr="#972e2e")
+            background: #b43535 !important
+            border-radius: 8px
+            color: #fff
+            text-decoration: none
+    #shop-detail
+      > div
+        margin: 20px
+      button
+        padding: 0
+      h2
+        font: normal 44px "Arial"
+        color: #af2c2c
+        margin-bottom: 10px
+      .logo img
+        max-width: 250px
+        box-shadow: 0  0 10px #ccc
+        margin: 30px 0
+    #map
+      position: relative
+      .map-content
+        z-index: 1
+        margin: 20px
+      .floor
+        position: relative
+      #floor1
+        top: 500px
+      #floor2
+        top: 1000px 
+    #news
+      td
+        width: 310px
+        padding: 10px
+
+
+        a
+          display: block
+          width: 310px
+          height: 258px
+          position: relative
+          border: solid 5px #c4c4c4
+          margin-bottom: 20px
+          div
+            position: absolute
+            margin-top: -50px
+            height: 50px
+            width: 310px
+            background: rgba(0,0,0,0.7)
+            text-align: center
+            span
+              margin-top: 10px
+              display: block          
+              font: bold 22px Arial
+              color: #fff
+    #news-detail
+      > div
+        margin: 20px
+        .image img
+          max-width: 250px
+          box-shadow: 0  0 10px #ccc
+          margin: 30px 0
+
+  position: fixed
+  bottom: 0
+  width: 100%
+  height: 250px
+  #oc-logo
+    float: left
+    padding: 10px 40px
+  #navigation
+    float: left
+    margin: 40px 15px
+
+
+
+
+  #inside
+    overflow: hidden
+    .section
+
+      display: none
+      overflow: auto
+      min-height: 800px
+
+  overflow: auto
+  
+  
+button
+  background: transparent
+  border: 0
+  
+.both
+  clear: both
